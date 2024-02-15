@@ -1,0 +1,259 @@
+:root {
+  --clr-brightBlue: hsl(220, 98%, 61%);
+  --clr-check-background-gradient1: #57ddff;
+  --clr-check-background-gradient2: #c058f3;
+
+  --cl-font: hsl(0, 0%, 98%);
+  --background-Grayish-Blue: hsl(236, 33%, 92%);
+
+  ---light-Grayish-Blue: hsl(233, 11%, 84%);
+  --dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+}
+
+.App.light {
+  --primary-color: hsl(0, 0%, 98%);
+  --background-color: hsl(236, 33%, 92%);
+
+  --font-color: hsl(237, 14%, 26%);
+
+  /* Other light mode styles */
+}
+
+.App.dark {
+  --primary-color: hsl(235, 24%, 19%);
+  --background-color: hsl(235, 21%, 11%);
+
+  --font-color: hsl(0, 0%, 98%);
+
+  /* Other dark mode styles */
+}
+
+.App {
+  background-color: var(--background-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: var(--font-color);
+}
+
+.p-header {
+  padding-block-start: 2rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.header {
+  background-image: url(./assets/images/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 32svh;
+}
+
+.logo__toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__toggle button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container {
+  display: flex;
+
+  background-color: var(--primary-color);
+}
+
+.br-form-container {
+  border-radius: 0.5rem;
+}
+
+.mb-form-container {
+  margin-block-start: 2rem;
+  padding: 0.7rem 1rem;
+  justify-content: space-between;
+}
+
+.form-container form {
+  width: 89%;
+}
+
+.form-container input {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+.form-container input::placeholder {
+  font-size: 1.2rem;
+  padding-inline-start: 0.2rem;
+  color: var(--font-color);
+}
+
+.form-container input:focus {
+  outline: none;
+}
+
+.circle-container {
+  width: 10%;
+}
+div.circle {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+
+  border: 1px solid var(--clr-check-background-gradient1);
+}
+.section-below {
+  padding-block-end: 1rem;
+}
+
+.todo_container {
+  margin-block-start: -10%;
+}
+
+.todo_container .container {
+  display: flex;
+  background-color: var(--primary-color);
+}
+
+.todo-padding {
+  padding: 1.15rem 1rem;
+}
+
+.todo-box img {
+  cursor: pointer;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.border-form-container {
+  border-bottom: 1px solid var(--very-Dark-Grayish-Blue);
+  gap: 0 !important;
+}
+
+.section-below .todo_container .container .form-container {
+  background-color: transparent;
+  align-items: center;
+}
+
+.section-below .todo_container .container .form-container .text {
+  justify-self: flex-end;
+  /* padding-inline-start: 0.7rem; */
+  width: 86%;
+}
+
+.section-below .todo_container .container .form-container .text p {
+  font-weight: 400;
+  line-height: 2;
+}
+
+.filter_section {
+  justify-content: space-between;
+}
+
+.filter_section .filter p {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2;
+  opacity: 0.7;
+  transition: ease-in 3000;
+}
+
+.filter_section .filter p:hover {
+  opacity: 1;
+}
+
+.button_container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-block: 1rem;
+  margin-inline: auto;
+}
+
+.button_container button {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--font-color);
+  opacity: 0.7;
+  transition: ease-in 3000;
+}
+
+.button_container button:hover {
+  opacity: 1;
+}
+
+.button_container button.active__link {
+  color: var(--clr-brightBlue);
+}
+
+.footer-section {
+  text-align: center;
+  margin-block: 2rem;
+}
+
+@media (min-width: 800px) {
+  .display__none {
+    display: none;
+  }
+
+  .header {
+    background-image: url(./assets/images/bg-desktop-light.jpg);
+  }
+
+  .todo_container {
+    margin-block-start: -3%;
+  }
+
+  .todo-box:hover .display__none {
+    display: block !important;
+  }
+}
+
+.checked-active .circle {
+  background: linear-gradient(
+    332deg,
+    rgba(192, 88, 243, 1) 45%,
+    rgba(87, 221, 255, 1) 78%
+  );
+  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checked-active p {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
