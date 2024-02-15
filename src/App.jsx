@@ -13,17 +13,8 @@ import sun from "./assets/images/icon-sun.svg";
 import crosss from "./assets/images/icon-cross.svg";
 import check from "./assets/images/icon-check.svg";
 
-const tod = [
-  { message: "Buy Bread and fry akara", key: 1, active: true },
-  { message: "reduce brigtness", key: 2, active: false },
-  { message: "Go home", key: 3, active: true },
-  { message: "Reduce global stupidity by 0.000001%", key: 4, active: false },
-  { message: "Buy Bread and fry akara", key: 5, active: true },
-  { message: "Buy Bread and fry akara", key: 6, active: true },
-];
-
 export default function App() {
-  const [todos, setTodods] = useState(tod);
+  const [todos, setTodods] = useState([]);
   const [mode, setMode] = useState("light"); // Default mode is light
 
   const toggleMode = () => {

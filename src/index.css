@@ -127,6 +127,7 @@ div.circle {
   border: 1px solid var(--clr-check-background-gradient1);
 }
 .section-below {
+  min-height: 70svh;
   padding-block-end: 1rem;
 }
 
